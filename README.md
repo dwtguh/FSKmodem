@@ -13,6 +13,16 @@ Then copy ```fsk.h``` to /usr/local/include
 ```
 sudo cp header/fsk.h /usr/local/include
 ```
+To build the fsk library try:
+```
+gcc -O2 -c -std=c99 fsk.c -o fsk.o -lm -lfftw3f
+gcc fsk.o -o libfsk.so -shared -fPIC
+```
+...and then maybe see the contents:
+```
+nm -D --defined-only libfsk.so
+```
+
 To compile the test file
 ```
 gcc fsk_test.c -o fsk_test -lfsk -lfftw3f -lm
