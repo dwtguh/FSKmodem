@@ -1,5 +1,5 @@
 ### FSK Modem
-An FSK Modem using either 2FSK or 4FSK based on the design by David Rowe and Brady O'Brien of the Codec 2 project.
+An FSK Modem using either 2FSK or 4FSK.
 
 Created a separate library with just the modem. Modified the original program to use modern complex math syntax, and use FFTW real FFT instead of the Kiss FFT.
 
