@@ -1,5 +1,4 @@
-### FSK Modem
-An FSK Modem using either 2FSK or 4FSK.
+### FSK Modem - An FSK Modem using either 2FSK or 4FSK.
 
 Original program modified to use complex math syntax, and use FFTW real FFT instead of the Kiss FFT.
 
