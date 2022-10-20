@@ -4,15 +4,6 @@ Original program modified to use complex math syntax, and use FFTW real FFT inst
 
 The demodulator code has been modified to operate on just the real spectrum, as the original worked with the complex spectrum.
 #### Build Instructions
-First copy the ```libfsk.so``` file to ```/usr/local/lib``` Make sure the permissions are set correctly (644).
-```
-sudo cp libfsk.so /usr/local/lib
-sudo ldconfig
-```
-Then copy ```fsk.h``` to /usr/local/include
-```
-sudo cp header/fsk.h /usr/local/include
-```
 To build the fsk library try:
 ```
 gcc -O2 -c -std=c99 fsk.c -o fsk.o -lm -lfftw3f
@@ -22,7 +13,15 @@ gcc fsk.o -o libfsk.so -shared -fPIC
 ```
 nm -D --defined-only libfsk.so
 ```
-
+Then copy the ```libfsk.so``` file to ```/usr/local/lib``` Make sure the permissions are set correctly (644).
+```
+sudo cp libfsk.so /usr/local/lib
+sudo ldconfig
+```
+Then copy ```fsk.h``` to /usr/local/include
+```
+sudo cp header/fsk.h /usr/local/include
+```
 To compile the test file
 ```
 gcc fsk_test.c -o fsk_test -lfsk -lfftw3f -lm
