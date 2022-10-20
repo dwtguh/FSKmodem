@@ -1,11 +1,9 @@
 ### FSK Modem
 An FSK Modem using either 2FSK or 4FSK.
 
-Created a separate library with just the modem. Modified the original program to use modern complex math syntax, and use FFTW real FFT instead of the Kiss FFT.
+Original program modified to use complex math syntax, and use FFTW real FFT instead of the Kiss FFT.
 
-The demodulator code has been highly modified to just operate on the real spectrum, as the original was doing some aerobatics with the complex spectrum.
-
-The design is for desktop class, or Raspberry Pi 4, and not firmware. FFTW does limit you in that way.
+The demodulator code has been modified to operate on just the real spectrum, as the original worked with the complex spectrum.
 #### Build Instructions
 First copy the ```libfsk.so``` file to ```/usr/local/lib``` Make sure the permissions are set correctly (644).
 ```
