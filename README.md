@@ -1,8 +1,6 @@
 ### FSK Modem - 2FSK or 4FSK
 
-Original program modified to use complex math syntax, and use FFTW real FFT instead of the Kiss FFT.
-
-The demodulator code has been modified to operate on just the real spectrum, as the original worked with the complex spectrum.
+Original program modified to use complex math syntax, and use FFTW instead of KISS. The demodulator code has been modified to operate on just the real spectrum, as the original worked with the complex spectrum.
 #### Build Instructions
 To build the fsk library try:
 ```
